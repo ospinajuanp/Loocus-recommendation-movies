@@ -1,0 +1,20 @@
+{
+  "name": "loocus-recommendation-movies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ospinajuanp/Loocus-recommendation-movies.git"
+  },
+  "author": "@ospinajuanp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ospinajuanp/Loocus-recommendation-movies/issues"
+  },
+  "homepage": "https://github.com/ospinajuanp/Loocus-recommendation-movies#readme"
+}
