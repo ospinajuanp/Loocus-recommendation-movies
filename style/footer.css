@@ -1,0 +1,47 @@
+/*
+    1. Positioning
+    2. Box model
+    3. Typography
+    4. View
+    5. Other
+*/
+html {
+  font-size: 62.2%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #272727;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: #272727;
+}
+
+.container-footer {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+  color: #EFFFFB;
+  background: #4F98CA;
+  border-top: 0.1rem solid #EFFFFB;
+}
+
+/*# sourceMappingURL=footer.css.map */

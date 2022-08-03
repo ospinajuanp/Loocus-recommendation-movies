@@ -5,18 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/categories.css">
+    <link rel="stylesheet" href="./style/popular.css">
+    <link rel="stylesheet" href="./style/footer.css">
     <script defer src="./src/main.mjs" type="module"></script>
     <title>Loocus' recommendation movies</title>
 </head>
 <body>
-    <header>
+    <header class="container-header">
 
-    </header>
-    <main>
+        <div class="header-container">
+            <div class="header-container--back">
+                <svg height="auto" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="auto" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " fill="#4F98CA"/>
+                </svg>
+            </div>
+
+            <div class="header-container--logo">
+                <img src="../images/logo-img-removebg-preview.png" alt="logo img">
+                <img src="../images/logo-name-removebg-preview.png" alt="logo text">
+            </div>
+
+            <div class="header-container--search">
+                <input class="header-container--search__input" id="btnSearch" type="text">
+            </div>
+        </div>
         
-    </main>
-    <footer>
+    </header>
+    <main class="container-main">
+        <article class="container-categories">
+            <div class="container-categories--title">
+                <h2>Categories</h2>
+            </div>
+            <div class="container-categories--items">
+                <div class="categories--items">
+                    Action
+                </div>
+                <div class="categories--items">
+                    Adventures
+                </div>
+                <div class="categories--items">
+                    Comedy
+                </div><div class="categories--items">
+                    Fantasy
+                </div><div class="categories--items">
+                    Drama
+                </div><div class="categories--items">
+                    Terror
+                </div><div class="categories--items">
+                    3D
+                </div><div class="categories--items">
+                    Police
+                </div><div class="categories--items">
+                    Crime
+                </div><div class="categories--items">
+                    Sport
+                </div>
+                
+            </div>
+        </article>
 
+        <article class="container-popular">
+            <div class="container-popular--title">
+                <h2>Top Popular</h2>
+            </div>
+            <div class="container-popular--slider">
+                <div class="container-popular--wrapper">
+                    <img src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg">
+                    <img src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg">
+                    <img src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg">
+                    <img src="https://cdn.wallpapersafari.com/24/98/dwMtqD.jpg">
+                </div>
+            </div>
+        </article>
+
+    </main>
+    <footer class="container-footer">
+        <div class="container-footer--content">
+            Code by <span class="container-footer--content__url"><a href="https://www.linkedin.com/in/ospinajuanp/">@Ospinajuanp</a></span>
+        </div>
     </footer>
+
+    <div class="container-movies">
+
+    </div>
+
+    <div class="container-categorie">
+        
+    </div>
+    
+    <div class="container-search">
+
+    </div>
+
 </body>
 </html>
