@@ -1,0 +1,49 @@
+/*
+    1. Positioning
+    2. Box model
+    3. Typography
+    4. View
+    5. Other
+*/
+
+
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+
+$primary: #272727; // (Primary)
+$secondary:#4F98CA; // (Secondary)
+$secondaryPrimaryAccentuate: #50D890; // (Dark and light secondary variants)
+$secondarySecondaryAccentuate: #EFFFFB; // (Dark and light secondary variants)
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: #272727;
+    // background: url('https://as01.epimg.net/meristation/imagenes/2020/09/04/guias/1599229032_628125_1599232629_sumario_normal.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center start;
+    // background-size: contain;
+}
+
+@mixin cursorPointer {
+    cursor: pointer;
+}
+
+.container-popular{
+    width: 20rem;
+    height: 10rem;
+    border: .1rem solid black;
+
+    .container-popular--wrapper{
+
+    }
+}
