@@ -1,0 +1,130 @@
+/*
+    1. Positioning
+    2. Box model
+    3. Typography
+    4. View
+    5. Other
+*/
+
+
+html{
+    font-size: 62.2%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.5rem;
+}
+
+$primary: #272727; // (Primary)
+$secondary:#4F98CA; // (Secondary)
+$secondaryPrimaryAccentuate: #50D890; // (Dark and light secondary variants)
+$secondarySecondaryAccentuate: #EFFFFB; // (Dark and light secondary variants)
+
+body{
+    width: 100%;
+    background: #272727;
+    // background: url('https://as01.epimg.net/meristation/imagenes/2020/09/04/guias/1599229032_628125_1599232629_sumario_normal.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center start;
+    // background-size: contain;
+}
+
+.modal-detail{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .detail-image{
+        width: 100%;
+        max-height: 45vh;
+        min-height: fit-content;
+        position: relative;
+        text-align: center;
+        display: flex;
+        margin: 0 auto;
+        overflow: hidden;
+        justify-content: center;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    
+        &--btn{
+            width: 10rem;
+            position: absolute;
+            left: 0;        
+        }
+        &--poster{
+            height: 50vh;
+        }
+    }
+    
+    .detail-content{
+        width: 95%;
+        min-height: 65vh;
+        margin: 0 auto;
+        padding: 2rem 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        position: absolute;
+        bottom: 4.1rem;
+        background: $secondarySecondaryAccentuate;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+
+        &--info{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr auto;
+
+            &__name{
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                padding: 2rem;
+            }
+            &__raking{
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                justify-self: end;
+                padding: 2rem;
+            }
+            &__description{
+                grid-column: 1 / 3;
+                grid-row: 2 / 3;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+        &--categorie{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            &__title{
+                font-size: 1.2rem;
+            }
+            &__container-items{
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                gap: .4rem;
+                flex-wrap: wrap;
+
+                &__item{
+                    padding: .4rem;
+                    border: .1rem solid ;
+                    border-radius: 1rem;
+
+                }
+            }
+        }
+    }
+}
