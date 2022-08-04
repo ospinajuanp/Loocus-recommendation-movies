@@ -31,7 +31,8 @@ a:link, a:visited, a:active {
 }
 
 .container-footer {
-  width: 100%;
+  min-width: 100%;
+  max-width: 55rem;
   height: 4rem;
   display: flex;
   justify-content: center;

@@ -27,11 +27,17 @@ $secondarySecondaryAccentuate: #EFFFFB; // (Dark and light secondary variants)
 body{
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
     background: #272727;
 }
-
+.inactive{
+    display: none!important;
+}
 .container-main{
-    width: 100%;
+    max-width: 55rem;
     height: 80%;
     display: flex;
     flex-direction: column;

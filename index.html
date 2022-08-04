@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="./style/categories.css">
     <link rel="stylesheet" href="./style/popular.css">
     <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/detail.css">
+
     <script defer src="./src/main.mjs" type="module"></script>
     <title>Loocus' recommendation movies</title>
 </head>
 <body>
-    <header class="container-header">
+    <header class="container-header ">
 
         <div class="header-container">
             <div class="header-container--back">
@@ -33,7 +35,7 @@
         </div>
         
     </header>
-    <main class="container-main">
+    <main class="container-main ">
         <article class="container-categories">
             <div class="container-categories--title">
                 <h2>Categories</h2>
@@ -90,16 +92,58 @@
         </div>
     </footer>
 
-    <div class="container-movies">
+    <div class="modal-detail inactive">
+        <div class="detail-image">
+            <img class="detail-image--btn" src="../images/back.svg">
+            <img class="detail-image--poster" src="https://image.tmdb.org/t/p/w500/p1F51Lvj3sMopG948F5HsBbl43C.jpg" alt="" srcset="">
+        </div>
+        <div class="detail-content">
+            <div class="detail-content--info">
+                <div class="detail-content--info__name">NAME</div>
+                <div class="detail-content--info__raking">7.3</div>
+                <div class="detail-content--info__description">
+                    <h2>DESCRIPTION</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi doloremque temporibus qui cupiditate, error suscipit ipsum dicta rem nobis consequatur dignissimos commodi? Facilis nesciunt esse at, incidunt quas accusantium sapiente.</p>
+                </div>
+            </div>
+            <div class="detail-content--categorie">
+                <div class="detail-content--categorie__title">
+                    <h2>Categories</h2>
+                </div>
+                <div class="detail-content--categorie__container-items">
+                    <div class="detail-content--categorie__container-items__item">
+                        Action
+                    </div>
+                    <div class="detail-content--categorie__container-items__item">
+                        Adventures
+                    </div>
+                    <div class="detail-content--categorie__container-items__item">
+                        Adventures
+                    </div>
+                    <div class="detail-content--categorie__container-items__item">
+                        Adventures
+                    </div>
+                </div>
+            </div>
+            <div class="detail-content--similar">
+                <div class="detail-content--similar__title">
+                    <h2>Similar Movies</h2>
+                </div>
+                <div class="detail-content--similar__movie">
+                    <div class="detail-content--similar__movie-item">
+                        <img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg">
+                    </div>
+                    <div class="detail-content--similar__movie-item">
+                        <img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg">
+                    </div>
+                    <div class="detail-content--similar__movie-item">
+                        <img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg">
+                    </div>
+                </div>
 
-    </div>
-
-    <div class="container-categorie">
+            </div>
+        </div>
         
-    </div>
-    
-    <div class="container-search">
-
     </div>
 
 </body>
