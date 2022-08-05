@@ -1,0 +1,78 @@
+/*
+    1. Positioning
+    2. Box model
+    3. Typography
+    4. View
+    5. Other
+*/
+html {
+  font-size: 62.2%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container-search {
+  max-width: 55rem;
+  min-height: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.container-search--header {
+  width: 100%;
+}
+.container-search--header__back {
+  width: 100%;
+  padding-top: 2rem;
+}
+.container-search--header__back svg {
+  width: 8rem;
+}
+.container-search--header__search {
+  width: 100%;
+  text-align: center;
+}
+.container-search--header__search-input {
+  width: 10rem;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+  border: none;
+  outline: none;
+  background: none;
+  color: #EFFFFB;
+  border: 0.1rem solid #4F98CA;
+  background: url("../images/search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 1s;
+}
+.container-search--header__search :focus {
+  width: 40rem;
+  height: 4rem;
+  outline: 0.4rem solid #50D890;
+  background-position: center right;
+  transition: all 3s;
+}
+.container-search--movies {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.container-search--movies__item {
+  padding: 0.6rem;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.container-search--movies__item img {
+  max-width: 17rem;
+}
+
+/*# sourceMappingURL=search.css.map */

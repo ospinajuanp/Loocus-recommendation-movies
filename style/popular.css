@@ -15,16 +15,6 @@ html {
   padding: 0;
 }
 
-body {
-  font-size: 1.5rem;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-  background: #272727;
-}
-
 .container-popular {
   color: #EFFFFB;
 }
