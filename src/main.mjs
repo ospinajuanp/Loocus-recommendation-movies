@@ -24,3 +24,21 @@ async function getTrendingMoviesPreview (){
 }
 getTrendingMoviesPreview()
 
+async function getCategoriesMoviesPreview (){
+    const res = await fetch(ULR_GET_CATEGORIES_PREVIEW,confFetch);
+    const data = await res.json();
+    const categories = await data.genres;
+    console.log(categories);
+    const categoriesContainer = document.querySelector('.container-categories--items')
+    categoriesContainer.innerHTML = ``
+    categories.forEach(categorie => {
+        if (!categorie.name.includes('TV')){
+            categoriesContainer.innerHTML += `
+            <div class="categories--items">
+                ${categorie.name}
+            </div>
+            `
+        }
+    });
+}
+getCategoriesMoviesPreview()
