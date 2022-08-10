@@ -5,10 +5,11 @@
     4. View
     5. Other
 */
-
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;500;600;700;800&display=swap');
 
 html{
     font-size: 62.2%;
+    font-family: 'JetBrains Mono', monospace;
 }
 *{
     box-sizing: border-box;

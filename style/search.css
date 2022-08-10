@@ -62,6 +62,7 @@ html {
 .container-search--movies {
   width: 100%;
   display: flex;
+  padding-block-start: 4rem;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
