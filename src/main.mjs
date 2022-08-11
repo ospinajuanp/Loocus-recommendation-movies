@@ -1,20 +1,23 @@
+// import axios from '../node_modules/axios/dist/axios.min.js';
 import { API_URL, API_KEY} from './secret.mjs';
-const ULR_GET_TRENDING_PREVIEW = `${API_URL}trending/movie/day?api_key=${API_KEY}`
-const ULR_GET_CATEGORIES_PREVIEW = `${API_URL}/genre/movie/list?api_key=${API_KEY}`
+const ULR_GET_TRENDING_PREVIEW = `trending/movie/day`
+const ULR_GET_CATEGORIES_PREVIEW = `genre/movie/list`
 
-let myHeaders = {
-    'Content-Type': 'application/json',
-}
-let confFetch = {
-    method: 'GET',
-    headers: myHeaders,
-}
+const api = axios.create({
+    baseURL:`${API_URL}`,
+    headers:{
+        'Content-Type':'application/json;charset=utf-8',
+    },
+    params:{
+        'api_key':`${API_KEY}`
+    },
+})
 
 async function getTrendingMoviesPreview (){
-    const res = await fetch(ULR_GET_TRENDING_PREVIEW,confFetch);
-    const data = await res.json();
+    const { data } = await api(ULR_GET_TRENDING_PREVIEW);
     const movies = await data.results;
     const movieContainer = document.querySelector('.container-popular--wrapper')
+    console.log(movieContainer);
     movieContainer.innerHTML = ``
     movies.forEach(movie => {
         movieContainer.innerHTML += `
@@ -25,8 +28,7 @@ async function getTrendingMoviesPreview (){
 getTrendingMoviesPreview()
 
 async function getCategoriesMoviesPreview (){
-    const res = await fetch(ULR_GET_CATEGORIES_PREVIEW,confFetch);
-    const data = await res.json();
+    const { data } = await api(ULR_GET_CATEGORIES_PREVIEW);
     const categories = await data.genres;
     console.log(categories);
     const categoriesContainer = document.querySelector('.container-categories--items')
