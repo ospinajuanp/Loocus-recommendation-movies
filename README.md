@@ -20,3 +20,5 @@ Owner of the api is https://www.themoviedb.org/
 
 ## Environmental installations
 - [SASS](https://sass-lang.com/install)(scss)
+- [AXIOS](https://www.npmjs.com/package/axios)(FETCH)
+- 
