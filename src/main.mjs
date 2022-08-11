@@ -1,4 +1,3 @@
-// import axios from '../node_modules/axios/dist/axios.min.js';
 import { API_URL, API_KEY} from './secret.mjs';
 const ULR_GET_TRENDING_PREVIEW = `trending/movie/day`
 const ULR_GET_CATEGORIES_PREVIEW = `genre/movie/list`
