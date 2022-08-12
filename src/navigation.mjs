@@ -1,4 +1,5 @@
 import { getTrendingMoviesPreview,getCategoriesMoviesPreview } from './main.mjs';
+import { headerModule,mainModule,modalModule,searchModule,footerModule } from './nodes.mjs';
 
 window.addEventListener('DOMContentLoaded',navigator,false)
 window.addEventListener('hashchange',navigator,false)
@@ -21,6 +22,11 @@ function navigator (){
 }
 
 function homePage (){
+    headerModule.classList.remove('inactive')
+    mainModule.classList.remove('inactive')
+    modalModule.classList.add('inactive')
+    searchModule.classList.add('inactive')
+    footerModule.classList.remove('inactive')
     getCategoriesMoviesPreview()
     getTrendingMoviesPreview()
 }
