@@ -31,14 +31,30 @@ function homePage (){
     getTrendingMoviesPreview()
 }
 function trendPage (){
-    
+    headerModule.classList.add('inactive')
+    mainModule.classList.add('inactive')
+    modalModule.classList.add('inactive')
+    searchModule.classList.remove('inactive')
+    footerModule.classList.remove('inactive')
 }
 function searchPage (){
-
-}
-function moviePage (){
-    
+    headerModule.classList.add('inactive')
+    mainModule.classList.add('inactive')
+    modalModule.classList.add('inactive')
+    searchModule.classList.remove('inactive')
+    footerModule.classList.remove('inactive')
 }
 function categoryPage (){
-
+    headerModule.classList.add('inactive')
+    mainModule.classList.add('inactive')
+    modalModule.classList.add('inactive')
+    searchModule.classList.remove('inactive')
+    footerModule.classList.remove('inactive')
+}
+function moviePage (){
+    headerModule.classList.add('inactive')
+    mainModule.classList.add('inactive')
+    modalModule.classList.remove('inactive')
+    searchModule.classList.add('inactive')
+    footerModule.classList.remove('inactive')
 }
