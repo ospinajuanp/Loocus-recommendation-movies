@@ -12,3 +12,7 @@ export const footerModule = document.querySelector('.container-footer');
 export const movieContainer = document.querySelector('.container-popular--wrapper')
 
 export const categoriesContainer = document.querySelector('.container-categories--items')
+
+export const btnSearch = document.getElementById('btnSearch')
+
+export const btnBack = document.getElementById('Layer_1')
