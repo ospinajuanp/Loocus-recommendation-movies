@@ -15,4 +15,4 @@ export const categoriesContainer = document.querySelector('.container-categories
 
 export const btnSearch = document.getElementById('btnSearch')
 
-export const btnBack = document.getElementById('Layer_1')
+export const btnBack = document.getElementById('btnBackPage')
