@@ -1,7 +1,8 @@
 import { API_URL, API_KEY} from './secret.mjs';
-import { movieContainer,categoriesContainer } from './nodes.mjs'
+import { movieContainer,categoriesContainer,containerCategory,titleCategory } from './nodes.mjs'
 const ULR_GET_TRENDING_PREVIEW = `trending/movie/day`
 const ULR_GET_CATEGORIES_PREVIEW = `genre/movie/list`
+const ULR_GET_CATEGORY = `discover/movie`
 
 const api = axios.create({
     baseURL:`${API_URL}`,
@@ -37,11 +38,37 @@ export async function getCategoriesMoviesPreview (){
             </div>
             `
         }
+
+        
     });
-    let btnList = categories.map(category => category.id )
-    btnList.forEach(btnCategory => {
-        let event = document.getElementById(btnCategory)
-        event.addEventListener('click',() => location.hash= `#category=${btnCategory}`)
+    categories.forEach(category => {
+        let event = document.getElementById(category.id)
+        event.addEventListener('click',() => location.hash= `#category=${category.id}-${category.name}`)
+        
     })
 }
 // getCategoriesMoviesPreview()
+
+export async function getMoviesByCategory (id){
+    let idCategory = id.split('-')[0]
+    let nameCategory = id.split('-')[1]    
+    const { data } = await api(ULR_GET_CATEGORY,{
+        params:{
+            with_genres:idCategory
+        }
+    });
+    const movies = await data.results;
+    titleCategory.innerHTML=`<h2>${nameCategory}</h2>`
+    containerCategory.innerHTML=``
+    console.log(movies);
+    for (let index = 0; index < 5; index++) {
+        console.log(movies[index]);
+        containerCategory.innerHTML+=`
+        <div class="container-search--movies__item">
+            <img src="https://image.tmdb.org/t/p/w500/${movies[index].poster_path}">
+        </div>
+        `
+    }
+    
+}
+// getMoviesByCategory()

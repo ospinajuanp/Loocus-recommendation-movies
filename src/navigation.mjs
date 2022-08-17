@@ -1,10 +1,13 @@
-import { getTrendingMoviesPreview,getCategoriesMoviesPreview } from './main.mjs';
-import { headerModule,mainModule,modalModule,searchModule,footerModule,btnSearch,btnBack } from './nodes.mjs';
+import { getTrendingMoviesPreview,getCategoriesMoviesPreview,getMoviesByCategory } from './main.mjs';
+import { headerModule,mainModule,modalModule,searchModule,footerModule,btnSearch,btnBack,btnBackCategory,btnSearchCategory,titleCategory } from './nodes.mjs';
 
 btnSearch.addEventListener('click',() => {  
     location.hash = '#search='
 })
 btnBack.addEventListener('click',() => {  
+    location.hash = '#home'
+})
+btnBackCategory.addEventListener('click',() => {  
     location.hash = '#home'
 })
 
@@ -14,8 +17,6 @@ window.addEventListener('DOMContentLoaded',navigator,false)
 window.addEventListener('hashchange',navigator,false)
 
 function navigator (){
-    console.log(location)
-
     if (location.hash.startsWith('#trends')){
         trendPage();
     } else if(location.hash.startsWith('#search=')){
@@ -27,7 +28,6 @@ function navigator (){
     }else{
         homePage()
     }
-    location.hash
 }
 
 function homePage (){
@@ -59,6 +59,12 @@ function categoryPage (){
     modalModule.classList.add('inactive')
     searchModule.classList.remove('inactive')
     footerModule.classList.remove('inactive')
+    titleCategory.classList.remove('inactive')
+    btnSearchCategory.classList.add('inactive')
+
+    let idCategory =  location.hash.split('=')[1]
+
+    getMoviesByCategory(idCategory)
 }
 function moviePage (){
     headerModule.classList.add('inactive')
@@ -67,3 +73,4 @@ function moviePage (){
     searchModule.classList.add('inactive')
     footerModule.classList.remove('inactive')
 }
+homePage()

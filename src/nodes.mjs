@@ -16,3 +16,11 @@ export const categoriesContainer = document.querySelector('.container-categories
 export const btnSearch = document.getElementById('btnSearch')
 
 export const btnBack = document.getElementById('btnBackPage')
+
+export const btnBackCategory = document.getElementById('btnBackPageCategory')
+
+export const btnSearchCategory = document.getElementById('btnPageSearch')
+
+export const titleCategory = document.getElementById('container-search--category')
+
+export const containerCategory = document.querySelector('.container-search--movies')

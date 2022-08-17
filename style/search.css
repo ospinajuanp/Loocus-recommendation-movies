@@ -59,6 +59,10 @@ html {
   background-position: center right;
   transition: all 3s;
 }
+.container-search--category h2 {
+  padding-top: 2rem;
+  color: #EFFFFB;
+}
 .container-search--movies {
   width: 100%;
   display: flex;

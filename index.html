@@ -20,7 +20,7 @@
     <title>Loocus' recommendation movies</title>
 </head>
 <body>
-    <header class="container-header inactive">
+    <header class="container-header ">
 
         <div class="header-container">
             
@@ -36,7 +36,7 @@
         
     </header>
 
-    <main class="container-main inactive">
+    <main class="container-main ">
         <article class="container-categories">
             <div class="container-categories--title">
                 <h2>Categories</h2>
@@ -148,21 +148,24 @@
         </div>
     </div>
 
-    <section class="container-search ">
+    <section class="container-search inactive">
         <div class="container-search--header">
-            <div class="container-search--header__back">
-                <svg height="auto" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="auto" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="container-search--header__back" id="btnBackPageCategory">
+                <svg height="auto" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="auto" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " fill="#4F98CA"/>
                 </svg>
             </div>
 
-            <div class="container-search--header__search">
+            <div class="container-search--header__search" id="btnPageSearch">
                 <input class="container-search--header__search-input" id="btnSearch" type="text">
             </div>
 
         </div>
-
+        <div class="container-search--category inactive" id="container-search--category">
+            <h2>accion</h2>
+        </div>
         <div class="container-search--movies">
+            
             <div class="container-search--movies__item">
                 <img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg">
             </div>

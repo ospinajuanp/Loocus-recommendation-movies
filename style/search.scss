@@ -74,6 +74,13 @@ $secondarySecondaryAccentuate: #EFFFFB; // (Dark and light secondary variants)
 
     }
 
+    &--category{
+        h2{
+            padding-top: 2rem;
+            color: $secondarySecondaryAccentuate;
+        }
+    }
+
     &--movies {
         width: 100%;
         display: flex;
