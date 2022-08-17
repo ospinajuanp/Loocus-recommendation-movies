@@ -29,14 +29,19 @@ export async function getCategoriesMoviesPreview (){
     const { data } = await api(ULR_GET_CATEGORIES_PREVIEW);
     const categories = await data.genres;
     categoriesContainer.innerHTML = ``
-    categories.forEach(categorie => {
-        if (!categorie.name.includes('TV')){
+    categories.forEach(category => {
+        if (!category.name.includes('TV')){
             categoriesContainer.innerHTML += `
-            <div class="categories--items">
-                ${categorie.name}
+            <div id='${category.id}' class="categories--items">
+                ${category.name}
             </div>
             `
         }
     });
+    let btnList = categories.map(category => category.id )
+    btnList.forEach(btnCategory => {
+        let event = document.getElementById(btnCategory)
+        event.addEventListener('click',() => location.hash= `#category=${btnCategory}`)
+    })
 }
 // getCategoriesMoviesPreview()
