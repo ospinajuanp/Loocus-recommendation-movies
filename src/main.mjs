@@ -42,9 +42,10 @@ export async function getCategoriesMoviesPreview (){
         
     });
     categories.forEach(category => {
-        let event = document.getElementById(category.id)
-        event.addEventListener('click',() => location.hash= `#category=${category.id}-${category.name}`)
-        
+        if (!category.name.includes('TV')){
+            let event = document.getElementById(category.id)
+            event.addEventListener('click',() => location.hash= `#category=${category.id}-${category.name}`)            
+        }
     })
 }
 // getCategoriesMoviesPreview()
@@ -60,9 +61,7 @@ export async function getMoviesByCategory (id){
     const movies = await data.results;
     titleCategory.innerHTML=`<h2>${nameCategory}</h2>`
     containerCategory.innerHTML=``
-    console.log(movies);
     for (let index = 0; index < 5; index++) {
-        console.log(movies[index]);
         containerCategory.innerHTML+=`
         <div class="container-search--movies__item">
             <img src="https://image.tmdb.org/t/p/w500/${movies[index].poster_path}">
