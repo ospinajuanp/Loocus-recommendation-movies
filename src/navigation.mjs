@@ -11,8 +11,6 @@ btnBackCategory.addEventListener('click',() => {
     location.hash = '#home'
 })
 
-
-
 window.addEventListener('DOMContentLoaded',navigator,false)
 window.addEventListener('hashchange',navigator,false)
 
