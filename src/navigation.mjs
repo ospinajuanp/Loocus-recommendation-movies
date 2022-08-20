@@ -1,4 +1,4 @@
-import { getTrendingMoviesPreview,getCategoriesMoviesPreview,getMoviesByCategory } from './main.mjs';
+import { getTrendingMoviesPreview,getCategoriesMoviesPreview,getMoviesByCategory } from './services.mjs';
 import { headerModule,mainModule,modalModule,searchModule,footerModule,btnSearch,btnBack,btnBackCategory,btnSearchCategory,titleCategory } from './nodesDOM.mjs';
 
 btnSearch.addEventListener('click',() => {  
