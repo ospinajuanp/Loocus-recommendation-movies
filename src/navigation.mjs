@@ -28,16 +28,12 @@ function navigator (){
     }
 }
 
-function windowsTopStart (){
-    window.scrollTo(0,0);
-}
-
 function homePage (){
     windowsTopStart()
-    toggleVisibilitySection(headerModule,'active')
-    toggleVisibilitySection(mainModule,'active')
     toggleVisibilitySection(modalModule,'inactive')
     toggleVisibilitySection(searchModule,'inactive')
+    toggleVisibilitySection(headerModule,'active')
+    toggleVisibilitySection(mainModule,'active')
     toggleVisibilitySection(footerModule,'active')
     getCategoriesMoviesPreview()
     getTrendingMoviesPreview()
@@ -55,18 +51,20 @@ function searchPage (){
     toggleVisibilitySection(headerModule,'inactive')
     toggleVisibilitySection(mainModule,'inactive')
     toggleVisibilitySection(modalModule,'inactive')
+    toggleVisibilitySection(titleCategory,'inactive')
     toggleVisibilitySection(searchModule,'active')
     toggleVisibilitySection(footerModule,'active')
+    toggleVisibilitySection(btnSearchCategory,'active')
 }
 function categoryPage (){
     windowsTopStart()
     toggleVisibilitySection(headerModule,'inactive')
     toggleVisibilitySection(mainModule,'inactive')
     toggleVisibilitySection(modalModule,'inactive')
+    toggleVisibilitySection(btnSearchCategory,'inactive')
     toggleVisibilitySection(searchModule,'active')
     toggleVisibilitySection(footerModule,'active')
     toggleVisibilitySection(titleCategory,'active')
-    toggleVisibilitySection(btnSearchCategory,'inactive')
     
     let idCategory =  location.hash.split('=')[1]
 
@@ -80,9 +78,14 @@ function moviePage (){
     toggleVisibilitySection(modalModule,'active')
     toggleVisibilitySection(footerModule,'active')
 }
-homePage()
-windowsTopStart()
+
+function windowsTopStart (){
+    window.scrollTo(0,0);
+}
 
 function toggleVisibilitySection (itemToggleDOM,state){
     state.includes('inactive') ? itemToggleDOM.classList.add('inactive') :itemToggleDOM.classList.remove('inactive')
 }
+
+homePage()
+windowsTopStart()
