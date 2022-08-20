@@ -34,11 +34,16 @@ function windowsTopStart (){
 
 function homePage (){
     windowsTopStart()
-    headerModule.classList.remove('inactive')
-    mainModule.classList.remove('inactive')
-    modalModule.classList.add('inactive')
-    searchModule.classList.add('inactive')
-    footerModule.classList.remove('inactive')
+    toggleVisibilitySection(headerModule,'inactive')
+    toggleVisibilitySection(mainModule,'inactive')
+    toggleVisibilitySection(modalModule,'active')
+    toggleVisibilitySection(searchModule,'active')
+    toggleVisibilitySection(footerModule,'inactive')
+    // headerModule.classList.remove('inactive')
+    // mainModule.classList.remove('inactive')
+    // modalModule.classList.add('inactive')
+    // searchModule.classList.add('inactive')
+    // footerModule.classList.remove('inactive')
     getCategoriesMoviesPreview()
     getTrendingMoviesPreview()
 }
@@ -82,3 +87,7 @@ function moviePage (){
 }
 homePage()
 windowsTopStart()
+
+function toggleVisibilitySection (itemToggleDOM,state){
+    state.includes('inactive') ? itemToggleDOM.classList.remove('inactive') :itemToggleDOM.classList.add('inactive')
+}
