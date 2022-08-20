@@ -44,11 +44,11 @@ function homePage (){
 }
 function trendPage (){
     windowsTopStart()
-    headerModule.classList.add('inactive')
-    mainModule.classList.add('inactive')
-    modalModule.classList.add('inactive')
-    searchModule.classList.remove('inactive')
-    footerModule.classList.remove('inactive')
+    toggleVisibilitySection(headerModule,'inactive')
+    toggleVisibilitySection(mainModule,'inactive')
+    toggleVisibilitySection(modalModule,'inactive')
+    toggleVisibilitySection(searchModule,'active')
+    toggleVisibilitySection(footerModule,'active')
 }
 function searchPage (){
     windowsTopStart()
