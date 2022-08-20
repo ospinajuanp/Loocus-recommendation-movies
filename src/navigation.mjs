@@ -1,5 +1,5 @@
 import { getTrendingMoviesPreview,getCategoriesMoviesPreview,getMoviesByCategory } from './main.mjs';
-import { headerModule,mainModule,modalModule,searchModule,footerModule,btnSearch,btnBack,btnBackCategory,btnSearchCategory,titleCategory } from './nodes.mjs';
+import { headerModule,mainModule,modalModule,searchModule,footerModule,btnSearch,btnBack,btnBackCategory,btnSearchCategory,titleCategory } from './nodesDOM.mjs';
 
 btnSearch.addEventListener('click',() => {  
     location.hash = '#search='

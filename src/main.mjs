@@ -1,5 +1,5 @@
 import { API_URL, API_KEY} from './secret.mjs';
-import { movieContainer,categoriesContainer,containerCategory,titleCategory } from './nodes.mjs'
+import { movieContainer,categoriesContainer,containerCategory,titleCategory } from './nodesDOM.mjs'
 const ULR_GET_TRENDING_PREVIEW = `trending/movie/day`
 const ULR_GET_CATEGORIES_PREVIEW = `genre/movie/list`
 const ULR_GET_CATEGORY = `discover/movie`
