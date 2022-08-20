@@ -39,11 +39,6 @@ function homePage (){
     toggleVisibilitySection(modalModule,'active')
     toggleVisibilitySection(searchModule,'active')
     toggleVisibilitySection(footerModule,'inactive')
-    // headerModule.classList.remove('inactive')
-    // mainModule.classList.remove('inactive')
-    // modalModule.classList.add('inactive')
-    // searchModule.classList.add('inactive')
-    // footerModule.classList.remove('inactive')
     getCategoriesMoviesPreview()
     getTrendingMoviesPreview()
 }
