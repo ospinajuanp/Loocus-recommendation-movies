@@ -34,11 +34,11 @@ function windowsTopStart (){
 
 function homePage (){
     windowsTopStart()
-    toggleVisibilitySection(headerModule,'inactive')
-    toggleVisibilitySection(mainModule,'inactive')
-    toggleVisibilitySection(modalModule,'active')
-    toggleVisibilitySection(searchModule,'active')
-    toggleVisibilitySection(footerModule,'inactive')
+    toggleVisibilitySection(headerModule,'active')
+    toggleVisibilitySection(mainModule,'active')
+    toggleVisibilitySection(modalModule,'inactive')
+    toggleVisibilitySection(searchModule,'inactive')
+    toggleVisibilitySection(footerModule,'active')
     getCategoriesMoviesPreview()
     getTrendingMoviesPreview()
 }
@@ -52,37 +52,37 @@ function trendPage (){
 }
 function searchPage (){
     windowsTopStart()
-    headerModule.classList.add('inactive')
-    mainModule.classList.add('inactive')
-    modalModule.classList.add('inactive')
-    searchModule.classList.remove('inactive')
-    footerModule.classList.remove('inactive')
+    toggleVisibilitySection(headerModule,'inactive')
+    toggleVisibilitySection(mainModule,'inactive')
+    toggleVisibilitySection(modalModule,'inactive')
+    toggleVisibilitySection(searchModule,'active')
+    toggleVisibilitySection(footerModule,'active')
 }
 function categoryPage (){
     windowsTopStart()
-    headerModule.classList.add('inactive')
-    mainModule.classList.add('inactive')
-    modalModule.classList.add('inactive')
-    searchModule.classList.remove('inactive')
-    footerModule.classList.remove('inactive')
-    titleCategory.classList.remove('inactive')
-    btnSearchCategory.classList.add('inactive')
-
+    toggleVisibilitySection(headerModule,'inactive')
+    toggleVisibilitySection(mainModule,'inactive')
+    toggleVisibilitySection(modalModule,'inactive')
+    toggleVisibilitySection(searchModule,'active')
+    toggleVisibilitySection(footerModule,'active')
+    toggleVisibilitySection(titleCategory,'active')
+    toggleVisibilitySection(btnSearchCategory,'inactive')
+    
     let idCategory =  location.hash.split('=')[1]
 
     getMoviesByCategory(idCategory)
 }
 function moviePage (){
     windowsTopStart()
-    headerModule.classList.add('inactive')
-    mainModule.classList.add('inactive')
-    modalModule.classList.remove('inactive')
-    searchModule.classList.add('inactive')
-    footerModule.classList.remove('inactive')
+    toggleVisibilitySection(headerModule,'inactive')
+    toggleVisibilitySection(mainModule,'inactive')
+    toggleVisibilitySection(mainModule,'inactive')
+    toggleVisibilitySection(modalModule,'active')
+    toggleVisibilitySection(footerModule,'active')
 }
 homePage()
 windowsTopStart()
 
 function toggleVisibilitySection (itemToggleDOM,state){
-    state.includes('inactive') ? itemToggleDOM.classList.remove('inactive') :itemToggleDOM.classList.add('inactive')
+    state.includes('inactive') ? itemToggleDOM.classList.add('inactive') :itemToggleDOM.classList.remove('inactive')
 }
