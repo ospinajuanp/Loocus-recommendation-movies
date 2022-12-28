@@ -37,9 +37,7 @@ export async function getCategoriesMoviesPreview (){
                 ${category.name}
             </div>
             `
-        }
-
-        
+        }        
     });
     categories.forEach(category => {
         if (!category.name.includes('TV')){
